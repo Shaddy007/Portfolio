@@ -15,8 +15,6 @@ import {
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 const stats = [
   {
     value: "125+",
@@ -159,7 +157,7 @@ export default function Hero() {
               className="mt-8 flex flex-wrap gap-4"
             >
               <motion.a
-                href={`${basePath}/cv.pdf`}
+                href="/cv.pdf"
                 download="Shadman_Sadiq_Chowdhury_CV.pdf"
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
@@ -265,7 +263,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_22%,rgba(34,211,238,0.10),transparent_38%),linear-gradient(145deg,rgba(8,24,42,0.95),rgba(5,12,28,0.98))]" />
 
                 <Image
-                  src={`${basePath}/profile.png`}
+                  src="/profile.png"
                   alt="Shadman Sadiq Chowdhury"
                   fill
                   priority

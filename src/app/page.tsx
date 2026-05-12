@@ -13,8 +13,6 @@ import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 const footerLinks = ["Home", "About", "Skills", "Projects", "Resume", "Contact"];
 
 const socialLinks = [
@@ -71,7 +69,7 @@ export default function Home() {
               >
                 <div className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-cyan-400/25 bg-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.25)] transition duration-300 group-hover:border-cyan-300/70 group-hover:shadow-[0_0_45px_rgba(139,92,246,0.35)]">
                   <Image
-                    src={`${basePath}/sc-logo.png`}
+                    src="/sc-logo.png"
                     alt="SC logo"
                     width={56}
                     height={56}
