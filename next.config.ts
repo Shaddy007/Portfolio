@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
 
   basePath: isGithubPages ? "/Portfolio" : "",
   assetPrefix: isGithubPages ? "/Portfolio/" : "",
+
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? "/Portfolio" : "",
+  },
 };
 
 export default nextConfig;

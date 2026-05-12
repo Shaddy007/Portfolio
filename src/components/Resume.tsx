@@ -10,6 +10,8 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const resumeHighlights = [
   "Manual, functional, regression, smoke, and sanity testing",
   "API testing with Postman using status code and response validation",
@@ -108,7 +110,7 @@ export default function Resume() {
 
                 <div className="mt-8 flex flex-wrap gap-4">
                   <motion.a
-                    href="/cv.pdf"
+                    href={`${basePath}/cv.pdf`}
                     download="Shadman_Sadiq_Chowdhury_CV.pdf"
                     whileHover={{ y: -3, scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}

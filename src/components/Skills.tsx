@@ -13,11 +13,13 @@ import {
   Star,
 } from "lucide-react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const skills = [
   {
     title: "Testing & QA",
     icon: FlaskConical,
-    image: "/skills/testing-qa.png",
+    image: `${basePath}/skills/testing-qa.png`,
     accent: "cyan",
     items: [
       "Manual Testing",
@@ -31,7 +33,7 @@ const skills = [
   {
     title: "API & Database",
     icon: Database,
-    image: "/skills/api-database.png",
+    image: `${basePath}/skills/api-database.png`,
     accent: "cyan",
     items: [
       "Postman",
@@ -45,7 +47,7 @@ const skills = [
   {
     title: "Bug Tracking",
     icon: Bug,
-    image: "/skills/bug-tracking.png",
+    image: `${basePath}/skills/bug-tracking.png`,
     accent: "purple",
     items: [
       "Bug Reporting",
@@ -59,7 +61,7 @@ const skills = [
   {
     title: "Automation",
     icon: Rocket,
-    image: "/skills/automation.png",
+    image: `${basePath}/skills/automation.png`,
     accent: "cyan",
     items: [
       "Playwright",
@@ -73,14 +75,14 @@ const skills = [
   {
     title: "Programming",
     icon: Code2,
-    image: "/skills/programming.png",
+    image: `${basePath}/skills/programming.png`,
     accent: "cyan",
     items: ["Java", "Python", "JavaScript", "C/C++", "React Basic", "Git"],
   },
   {
     title: "Soft Skills",
     icon: ShieldCheck,
-    image: "/skills/soft-skills.png",
+    image: `${basePath}/skills/soft-skills.png`,
     accent: "purple",
     items: [
       "Analytical Thinking",

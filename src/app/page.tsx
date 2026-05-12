@@ -13,6 +13,8 @@ import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const footerLinks = ["Home", "About", "Skills", "Projects", "Resume", "Contact"];
 
 const socialLinks = [
@@ -51,9 +53,7 @@ export default function Home() {
         <Contact />
       </div>
 
-      {/* FOOTER */}
       <footer className="relative z-20 overflow-hidden border-t border-cyan-400/15 bg-white/70 backdrop-blur-2xl dark:bg-[#030817]/82">
-        {/* Premium footer glow */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(34,211,238,0.08),transparent_38%,rgba(139,92,246,0.08))] dark:bg-[linear-gradient(120deg,rgba(34,211,238,0.04),transparent_40%,rgba(139,92,246,0.06))]" />
           <div className="absolute -left-32 -top-28 h-72 w-72 rounded-full bg-cyan-400/14 blur-[110px] dark:bg-cyan-500/8" />
@@ -63,7 +63,6 @@ export default function Home() {
         <div className="relative mx-auto max-w-[1380px] px-8 py-10 max-md:px-5">
           <div className="rounded-[2rem] border border-cyan-300/25 bg-white/38 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-cyan-400/12 dark:bg-white/[0.025] dark:shadow-[0_24px_90px_rgba(0,0,0,0.25)]">
             <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-              {/* Brand */}
               <motion.a
                 href="#home"
                 whileHover={{ y: -3 }}
@@ -72,7 +71,7 @@ export default function Home() {
               >
                 <div className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-cyan-400/25 bg-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.25)] transition duration-300 group-hover:border-cyan-300/70 group-hover:shadow-[0_0_45px_rgba(139,92,246,0.35)]">
                   <Image
-                    src="/sc-logo.png"
+                    src={`${basePath}/sc-logo.png`}
                     alt="SC logo"
                     width={56}
                     height={56}
@@ -92,7 +91,6 @@ export default function Home() {
                 </div>
               </motion.a>
 
-              {/* Links */}
               <nav className="flex flex-wrap items-center gap-5 text-sm font-semibold text-slate-500 dark:text-slate-400">
                 {footerLinks.map((item) => (
                   <motion.a
@@ -108,7 +106,6 @@ export default function Home() {
                 ))}
               </nav>
 
-              {/* Socials */}
               <div className="flex items-center gap-3">
                 {socialLinks.map((item) => {
                   const Icon = item.icon;
