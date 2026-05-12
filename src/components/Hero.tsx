@@ -74,7 +74,7 @@ export default function Hero() {
       className="section-shell relative flex min-h-screen items-center scroll-mt-28 pt-28"
     >
       <div className="section-wrap w-full">
-        <div className="grid items-center gap-16 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="grid items-center gap-20 lg:grid-cols-[0.92fr_1.08fr]">
           {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, y: 34 }}
@@ -227,24 +227,56 @@ export default function Hero() {
             transition={{ duration: 0.85, delay: 0.22, ease: "easeOut" }}
             className="relative flex flex-col items-center justify-center"
           >
-            {/* Profile image */}
-            <div className="relative h-[430px] w-[430px] rounded-full md:h-[520px] md:w-[520px]">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-violet-500 p-[7px] shadow-[0_0_70px_rgba(34,211,238,0.2)]">
-                <div className="relative h-full w-full overflow-hidden rounded-full bg-[#071322]">
-                  <Image
-                    src={`${basePath}/profile.png`}
-                    alt="Shadman Sadiq Chowdhury"
-                    fill
-                    priority
-                    sizes="520px"
-                    className="scale-[0.86] object-contain object-center"
-                  />
-                </div>
+            {/* Profile image circle */}
+            <div className="relative h-[420px] w-[420px] md:h-[500px] md:w-[500px]">
+              {/* Animated outer neon ring */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute inset-0 rounded-full p-[7px]"
+                style={{
+                  background:
+                    "conic-gradient(from 0deg, #22d3ee, #0ea5e9, #3b82f6, #8b5cf6, #a855f7, #22d3ee)",
+                  boxShadow:
+                    "0 0 48px rgba(34,211,238,0.22), 0 0 90px rgba(139,92,246,0.18)",
+                }}
+              />
+
+              {/* Soft pulse glow */}
+              <motion.div
+                animate={{
+                  opacity: [0.45, 0.75, 0.45],
+                  scale: [1, 1.04, 1],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -inset-8 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.20),transparent_58%)] blur-2xl"
+              />
+
+              {/* Main photo holder */}
+              <div className="absolute inset-[10px] overflow-hidden rounded-full border border-cyan-300/20 bg-[#071322] shadow-[inset_0_0_60px_rgba(34,211,238,0.08)]">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_22%,rgba(34,211,238,0.10),transparent_38%),linear-gradient(145deg,rgba(8,24,42,0.95),rgba(5,12,28,0.98))]" />
+
+                <Image
+                  src={`${basePath}/profile.png`}
+                  alt="Shadman Sadiq Chowdhury"
+                  fill
+                  priority
+                  sizes="500px"
+                  className="relative z-10 scale-[1.03] object-contain object-bottom"
+                />
               </div>
 
-              <div className="pointer-events-none absolute inset-4 rounded-full border border-white/10" />
-              <div className="pointer-events-none absolute -inset-10 rounded-full bg-cyan-400/10 blur-[70px]" />
-              <div className="pointer-events-none absolute -right-12 bottom-8 h-44 w-44 rounded-full bg-violet-500/15 blur-[70px]" />
+              {/* Inner premium ring */}
+              <div className="pointer-events-none absolute inset-[22px] rounded-full border border-white/10" />
+              <div className="pointer-events-none absolute inset-[34px] rounded-full border border-cyan-300/10" />
             </div>
 
             {/* Stats */}
@@ -252,7 +284,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.55, ease: "easeOut" }}
-              className="mt-16 grid w-full max-w-3xl grid-cols-2 gap-5 md:grid-cols-4"
+              className="mt-20 grid w-full max-w-3xl grid-cols-2 gap-5 md:grid-cols-4"
             >
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
