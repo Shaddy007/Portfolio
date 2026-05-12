@@ -75,7 +75,7 @@ export default function Hero() {
     >
       <div className="section-wrap w-full">
         <div className="grid items-center gap-16 lg:grid-cols-[0.92fr_1.08fr]">
-          {/* LEFT */}
+          {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
@@ -166,6 +166,7 @@ export default function Hero() {
                 className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-500 px-7 py-4 text-sm font-black text-white shadow-[0_18px_45px_rgba(14,165,233,0.28)] transition-all duration-300"
               >
                 <span className="absolute inset-0 translate-y-full bg-gradient-to-r from-violet-500 via-sky-500 to-cyan-500 transition-transform duration-300 group-hover:translate-y-0" />
+
                 <span className="relative flex items-center gap-3">
                   Download CV
                   <Download className="h-4 w-4" />
@@ -219,13 +220,14 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT */}
+          {/* RIGHT SIDE */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96, y: 34 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.22, ease: "easeOut" }}
             className="relative flex flex-col items-center justify-center"
           >
+            {/* Profile image */}
             <div className="relative h-[430px] w-[430px] rounded-full md:h-[520px] md:w-[520px]">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-violet-500 p-[7px] shadow-[0_0_70px_rgba(34,211,238,0.2)]">
                 <div className="relative h-full w-full overflow-hidden rounded-full bg-[#071322]">
@@ -235,7 +237,7 @@ export default function Hero() {
                     fill
                     priority
                     sizes="520px"
-                    className="object-cover object-center"
+                    className="scale-[0.86] object-contain object-center"
                   />
                 </div>
               </div>
@@ -245,6 +247,7 @@ export default function Hero() {
               <div className="pointer-events-none absolute -right-12 bottom-8 h-44 w-44 rounded-full bg-violet-500/15 blur-[70px]" />
             </div>
 
+            {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
