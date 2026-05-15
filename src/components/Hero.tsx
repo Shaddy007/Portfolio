@@ -69,10 +69,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="section-shell relative flex min-h-screen items-center scroll-mt-28 pt-28"
+      className="section-shell relative flex min-h-screen items-center scroll-mt-28 pt-24 md:pt-28"
     >
       <div className="section-wrap w-full">
-        <div className="grid items-center gap-20 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
           {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, y: 34 }}
@@ -84,10 +84,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
-              className="mb-6 inline-flex items-center gap-3 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-5 py-2 text-xs font-black uppercase tracking-[0.28em] text-emerald-500 shadow-[0_0_35px_rgba(16,185,129,0.12)] backdrop-blur-xl dark:text-emerald-300"
+              className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-emerald-500 shadow-[0_0_35px_rgba(16,185,129,0.12)] backdrop-blur-xl dark:text-emerald-300 sm:gap-3 sm:px-5 sm:text-xs sm:tracking-[0.28em]"
             >
               <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.9)]" />
-              Open to QA Opportunities
+              Open to SQA Opportunities
             </motion.div>
 
             <motion.div
@@ -104,7 +104,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-              className="glow-text max-w-3xl text-[4.2rem] font-black leading-[0.92] tracking-[-0.07em] md:text-[5.8rem] lg:text-[6.5rem]"
+              className="glow-text max-w-3xl text-[3rem] font-black leading-[0.95] tracking-[-0.06em] sm:text-[4.2rem] md:text-[5.8rem] lg:text-[6.5rem]"
             >
               <span className="gradient-text block">Shadman</span>
               <span className="gradient-text block">Sadiq</span>
@@ -117,20 +117,24 @@ export default function Hero() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.32, ease: "easeOut" }}
-              className="mt-7 min-h-[42px] text-3xl font-black tracking-[-0.04em] md:text-4xl"
+              className="mt-6 min-h-[38px] text-2xl font-black tracking-[-0.04em] sm:text-3xl md:mt-7 md:text-4xl"
             >
               <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-400 bg-clip-text text-transparent">
                 <TypeAnimation
                   sequence={[
-                    "Aspiring SQA Engineer",
-                    1600,
-                    "Manual Testing Enthusiast",
-                    1600,
-                    "API Testing Learner",
-                    1600,
-                    "Quality-Focused Problem Solver",
-                    1600,
-                  ]}
+    "SQA Engineer",
+    1600,
+    "Software Quality Tester",
+    1600,
+    "Manual & API Testing Learner",
+    1600,
+    "Test Case Design Enthusiast",
+    1600,
+    "Bug Reporting Specialist",
+    1600,
+    "Quality-Driven Problem Solver",
+    1600,
+  ]}
                   wrapper="span"
                   speed={42}
                   repeat={Infinity}
@@ -143,7 +147,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.42, ease: "easeOut" }}
-              className="mt-8 max-w-2xl text-base font-medium leading-8 text-slate-800 dark:text-slate-200 md:text-lg"
+              className="mt-7 max-w-2xl text-base font-medium leading-8 text-slate-800 dark:text-slate-200 md:mt-8 md:text-lg"
             >
               I test web applications with a quality-first mindset, validate
               APIs, design clear test cases, and report defects that improve
@@ -154,18 +158,18 @@ export default function Hero() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.52, ease: "easeOut" }}
-              className="mt-8 flex flex-wrap gap-4"
+              className="mt-8 flex flex-wrap gap-3 max-sm:grid max-sm:grid-cols-2 md:gap-4"
             >
               <motion.a
                 href="/cv.pdf"
                 download="Shadman_Sadiq_Chowdhury_CV.pdf"
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
-                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-500 px-7 py-4 text-sm font-black text-white shadow-[0_18px_45px_rgba(14,165,233,0.28)] transition-all duration-300"
+                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-500 px-5 py-4 text-xs font-black text-white shadow-[0_18px_45px_rgba(14,165,233,0.28)] transition-all duration-300 sm:gap-3 sm:px-7 sm:text-sm"
               >
                 <span className="absolute inset-0 translate-y-full bg-gradient-to-r from-violet-500 via-sky-500 to-cyan-500 transition-transform duration-300 group-hover:translate-y-0" />
 
-                <span className="relative flex items-center gap-3">
+                <span className="relative flex items-center gap-2 sm:gap-3">
                   Download CV
                   <Download className="h-4 w-4" />
                 </span>
@@ -175,7 +179,7 @@ export default function Hero() {
                 href="#contact"
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
-                className="group inline-flex items-center justify-center gap-3 rounded-2xl border border-cyan-400/40 bg-white/60 px-7 py-4 text-sm font-black text-cyan-800 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500 hover:text-white dark:bg-transparent dark:text-white dark:hover:bg-cyan-500"
+                className="group inline-flex items-center justify-center gap-2 rounded-2xl border border-cyan-400/40 bg-white/60 px-5 py-4 text-xs font-black text-cyan-800 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500 hover:text-white dark:bg-transparent dark:text-white dark:hover:bg-cyan-500 sm:gap-3 sm:px-7 sm:text-sm"
               >
                 Get in Touch
                 <Send className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -186,7 +190,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.62, ease: "easeOut" }}
-              className="mt-7 flex items-center gap-3"
+              className="mt-7 flex flex-wrap items-center gap-3"
             >
               {socials.map((item) => {
                 const Icon = item.icon;
@@ -226,7 +230,7 @@ export default function Hero() {
             className="relative flex flex-col items-center justify-center"
           >
             {/* Profile image circle */}
-            <div className="relative h-[420px] w-[420px] md:h-[500px] md:w-[500px]">
+            <div className="relative h-[300px] w-[300px] max-[380px]:h-[275px] max-[380px]:w-[275px] sm:h-[380px] sm:w-[380px] md:h-[500px] md:w-[500px]">
               {/* Animated outer neon ring */}
               <motion.div
                 animate={{ rotate: 360 }}
@@ -255,7 +259,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -inset-8 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.20),transparent_58%)] blur-2xl"
+                className="absolute -inset-5 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.20),transparent_58%)] blur-2xl md:-inset-8"
               />
 
               {/* Main photo holder */}
@@ -267,7 +271,7 @@ export default function Hero() {
                   alt="Shadman Sadiq Chowdhury"
                   fill
                   priority
-                  sizes="500px"
+                  sizes="(max-width: 640px) 300px, (max-width: 768px) 380px, 500px"
                   className="relative z-10 scale-[1.03] object-contain object-bottom"
                 />
               </div>
@@ -282,7 +286,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.55, ease: "easeOut" }}
-              className="mt-20 grid w-full max-w-3xl grid-cols-2 gap-5 md:grid-cols-4"
+              className="mt-12 grid w-full max-w-[360px] grid-cols-2 gap-4 sm:max-w-xl md:mt-20 md:max-w-3xl md:grid-cols-4 md:gap-5"
             >
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
@@ -301,13 +305,13 @@ export default function Hero() {
                       y: -6,
                       transition: { duration: 0.18, ease: "easeOut" },
                     }}
-                    className="group relative overflow-hidden rounded-[1.6rem] border border-cyan-400/22 bg-white/55 p-5 text-center shadow-[0_24px_70px_rgba(15,23,42,0.09)] backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/55 hover:shadow-[0_28px_90px_rgba(14,165,233,0.14)] dark:bg-white/[0.035]"
+                    className="group relative overflow-hidden rounded-[1.4rem] border border-cyan-400/22 bg-white/55 p-4 text-center shadow-[0_24px_70px_rgba(15,23,42,0.09)] backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/55 hover:shadow-[0_28px_90px_rgba(14,165,233,0.14)] dark:bg-white/[0.035] md:rounded-[1.6rem] md:p-5"
                   >
                     <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-500 transition-all duration-300 group-hover:bg-cyan-500 group-hover:text-white dark:text-cyan-300">
                       <Icon size={21} />
                     </div>
 
-                    <p className="text-3xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
+                    <p className="text-2xl font-black tracking-[-0.04em] text-slate-950 dark:text-white md:text-3xl">
                       {stat.value}
                     </p>
 

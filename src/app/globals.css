@@ -1105,6 +1105,213 @@ html[data-theme="light"] footer {
 }
 
 /* =========================
+   FINAL RESPONSIVE ALIGNMENT FIXES
+   Design same, width/spacing safer
+========================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main,
+section,
+footer,
+.section-shell {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.section-wrap {
+  width: min(100% - 40px, 1380px);
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+a,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+span {
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 1440px) {
+  .section-wrap {
+    width: min(100% - 64px, 1380px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-wrap {
+    width: min(100% - 36px, 100%);
+  }
+
+  .section-space {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  .hero-card {
+    text-align: center;
+  }
+
+  .hero-copy {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-right-stack {
+    align-items: center;
+  }
+
+  .hero-stats-grid {
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-wrap {
+    width: min(100% - 28px, 100%);
+  }
+
+  .section-space {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .hero-section-pad {
+    padding-top: 104px;
+    padding-bottom: 56px;
+  }
+
+  .hero-photo-shell {
+    width: min(72vw, 300px);
+    min-width: 240px;
+  }
+
+  .hero-stats-grid {
+    width: min(100%, 430px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .premium-stat-card {
+    min-height: 110px;
+    padding: 16px 12px;
+  }
+
+  .stat-value {
+    font-size: 1.45rem;
+  }
+
+  .stat-label {
+    font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-wrap {
+    width: min(100% - 24px, 100%);
+  }
+
+  .section-space {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hero-section-pad {
+    padding-top: 96px;
+    padding-bottom: 48px;
+  }
+
+  .hero-photo-shell {
+    width: min(76vw, 285px);
+    min-width: 230px;
+  }
+
+  .hero-stats-grid {
+    width: min(100%, 360px);
+    gap: 12px;
+  }
+
+  .premium-stat-card {
+    border-radius: 18px;
+    min-height: 104px;
+    padding: 14px 10px;
+  }
+
+  .stat-icon {
+    margin-bottom: 10px;
+  }
+
+  .stat-value {
+    font-size: 1.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .brand-wordmark-main {
+    font-size: 1.55rem;
+  }
+
+  .brand-wordmark-dot {
+    font-size: 1.65rem;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .section-wrap {
+    width: min(100% - 20px, 100%);
+  }
+
+  .hero-photo-shell {
+    width: min(74vw, 260px);
+    min-width: 215px;
+  }
+
+  .hero-stats-grid {
+    width: min(100%, 330px);
+    gap: 10px;
+  }
+
+  .premium-stat-card {
+    min-height: 98px;
+    padding: 12px 8px;
+  }
+}
+
+/* =========================
    SCROLLBAR
 ========================= */
 
